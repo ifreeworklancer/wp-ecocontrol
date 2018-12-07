@@ -1,0 +1,17 @@
+#footer-banner {
+  padding: 45px 0;
+  background: url('../images/bg/decor/linear-big.jpg') 50% 50% /cover no-repeat;
+
+  .section-title {
+    text-align: center;
+    color: #fff;
+    font-weight: normal;
+    line-height: 1;
+    margin-bottom: 0;
+    text-transform: uppercase;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      font-size: $h2-font-size / 1.3;
+    }
+  }
+}

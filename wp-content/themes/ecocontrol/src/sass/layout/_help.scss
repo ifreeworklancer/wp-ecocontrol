@@ -1,0 +1,38 @@
+#help {
+  padding: 100px 0;
+}
+
+.help-item {
+  position: relative;
+
+  &-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .title {
+      max-width: 180px;
+    }
+  }
+
+  .subtitle {
+    margin-bottom: 50px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    right: -80px;
+    bottom: -105px;
+    width: 165px;
+    height: 165px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('../images/icon/decor/arrow-dark.png');
+    display: none;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      display: block;
+    }
+  }
+}

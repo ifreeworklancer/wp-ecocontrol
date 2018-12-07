@@ -1,0 +1,36 @@
+@import "config/variables";
+@import "config/placeholders";
+
+@import "~bootstrap/scss/bootstrap";
+
+@import "base/body";
+@import "base/btn";
+@import "base/layout";
+
+@import "modules/menu";
+@import "modules/slider";
+@import "modules/forms";
+
+@import "layout/header";
+@import "layout/intro";
+@import "layout/target";
+@import "layout/join";
+@import "layout/technology";
+@import "layout/eco-nav";
+@import "layout/help";
+@import "layout/news";
+@import "layout/events";
+@import "layout/footer-banner";
+@import "layout/call";
+@import "layout/footer";
+
+@import "layout/page-maps";
+@import "layout/archive-calendar";
+@import "layout/archive-news";
+@import "layout/archive-held-events";
+@import "layout/archive-institute";
+@import "layout/page-help";
+@import "layout/page-subscribe";
+@import "layout/page-appeal";
+@import "layout/page-form-appeal";
+@import "layout/single";

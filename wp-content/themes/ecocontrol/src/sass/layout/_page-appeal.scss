@@ -1,0 +1,105 @@
+#page-appeal {
+  padding-top: 60px;
+
+  .page-appeal-item {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0;
+    box-shadow: 0px 0px 26px -5px rgba(51,51,51,1);
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      margin: 110px 40px;
+      flex-direction: row;
+    }
+
+    &-content {
+      width: 100%;
+      position: relative;
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        width: 65%;
+      }
+
+      &-header {
+        padding: 15px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $primary;
+
+        .title {
+          margin-bottom: 0;
+          color: #fff;
+        }
+      }
+
+      &-body {
+        padding: 15px 30px;
+        background: #fff;
+
+        .item {
+          margin-bottom: 15px;
+
+          &-title {
+            color: #8A8A8A;
+
+            .value {
+              color: $dark;
+            }
+          }
+        }
+
+        .status {
+          margin-bottom: 5px;
+          font-size: 24px;
+          text-transform: uppercase;
+          color: #DAA900;
+        }
+
+        .send-appeal {
+          text-transform: uppercase;
+          text-decoration: underline;
+          font-size: 16px;
+          color: $dark;
+        }
+      }
+    }
+
+    .map {
+      width: 100%;
+      height: 250px;
+      @extend %img;
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        width: 35%;
+        height: auto;
+      }
+    }
+  }
+
+  .page-appeal-img {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 0;
+    background: url('../images/bg/decor/pattern-bg.jpg') 50% 50% /cover no-repeat;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      flex-direction: row;
+    }
+
+    &-item {
+      margin: 0 auto 20px;
+      width: 60%;
+      height: 135px;
+      @extend %img;
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        width: 25%;
+        margin: 0 25px;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,29 @@
+#subscribe {
+  padding: 100px 0;
+  height: auto;
+  background: url('../images/bg/page-subscribe-bg.jpg') 50% 50% /cover no-repeat;
+
+  @media (min-width: map_get($grid-breakpoints, md)) {
+    padding: 0;
+    height: 100vh;
+  }
+
+  .content {
+
+    &-form {
+      padding: 45px 50px;
+      background: #fff;
+      box-shadow: 0px 0px 40px -9px rgba(51,51,3,1);
+    }
+  }
+
+  .form-header {
+    margin-bottom: 25px;
+    text-align: center;
+
+    &__title {
+      margin-bottom: 0;
+      font-weight: normal;
+    }
+  }
+}

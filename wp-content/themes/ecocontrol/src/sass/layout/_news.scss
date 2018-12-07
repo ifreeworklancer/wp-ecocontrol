@@ -1,0 +1,24 @@
+#news {
+  padding: 60px 0;
+  background: url("../images/bg/decor/pattern-bg.jpg") 50% 50% /cover no-repeat;
+
+  .section-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+
+    @media (min-width: map_get($grid-breakpoints, xl)) {
+      flex-direction: row;
+    }
+
+    .subtitle {
+      margin: 20px 0;
+
+      @media (min-width: map_get($grid-breakpoints, xl)) {
+        margin: 0 20px;
+        max-width: 300px;
+      }
+    }
+  }
+}

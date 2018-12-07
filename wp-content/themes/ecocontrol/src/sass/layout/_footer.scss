@@ -1,0 +1,44 @@
+#app-footer {
+  padding: 50px 0 20px;
+  background: $light;
+}
+
+.footer-item {
+  margin-bottom: 30px;
+  text-align: center;
+
+  @media (min-width: map_get($grid-breakpoints, sm)) {
+    text-align: left;
+  }
+
+  .social-list {
+    display: inline-flex;
+    margin: 0 auto;
+  }
+
+  .title {
+    margin-bottom: 15px;
+  }
+
+  .footer-list {
+
+    li {
+      text-align: center;
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        text-align: left;
+      }
+
+      a {
+        font-size: 16px;
+        color: $body-color;
+      }
+    }
+  }
+
+  .footer-copyr {
+    margin-top: 40px;
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+}

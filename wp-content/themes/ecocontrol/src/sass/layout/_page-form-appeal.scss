@@ -1,0 +1,30 @@
+#page-form-appeal {
+  padding: 150px 0;
+  min-height: 100vh;
+  background: url('../images/bg/page-form-appeal-bg.jpg') 50% 50% /cover no-repeat;
+
+  .content {
+
+    &-form {
+      padding: 45px 50px;
+      background: #fff;
+      box-shadow: 0px 0px 40px -9px rgba(51,51,3,1);
+    }
+  }
+
+  .form-header {
+    margin-bottom: 25px;
+    text-align: center;
+
+    &__title {
+      margin-bottom: 0;
+      font-weight: normal;
+    }
+  }
+
+  #page-form-appeal__maps {
+    height: 365px;
+    @extend %img;
+    border: 1px solid $dark;
+  }
+}

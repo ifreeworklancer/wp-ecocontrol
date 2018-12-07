@@ -1,0 +1,62 @@
+#technology {
+  padding: 100px 0 50px;
+  background: url("../images/bg/technology-bg.jpg") 50% 50% /cover no-repeat;
+
+  .section-title {
+    font-size: 28px;
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      font-size: $h2-font-size / 1.6;
+    }
+  }
+
+  .row {
+    margin-bottom: 60px;
+
+    @media (min-width: map_get($grid-breakpoints, md)) {
+      margin-bottom: 100px;
+    }
+
+  }
+}
+
+.technology-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: map_get($grid-breakpoints, md)) {
+    flex-direction: row;
+  }
+
+  .img {
+    @extend %img;
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+
+    @media (min-width: map_get($grid-breakpoints, md)) {
+      margin-bottom: 0;
+    }
+  }
+
+  .content {
+    color: #fff;
+    
+    .title {
+      margin-bottom: 0;
+      padding: 3px 5px;
+      display: inline-block;
+      background: $primary;
+      color: #fff;
+    }
+
+    .subtitle {
+      margin: 5px 0;
+    }
+  }
+}

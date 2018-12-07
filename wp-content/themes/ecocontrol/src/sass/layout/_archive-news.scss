@@ -1,0 +1,138 @@
+#archive-news {
+
+  .section-title {
+    font-weight: normal;
+  }
+
+  .section-subtitle {
+    margin: 30px 0 75px;
+    padding: 50px 40px;
+    background: url('../images/bg/decor/pattern/decor-pattern.jpg') 50% 50% /cover no-repeat;
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+
+
+.news-tabs {
+
+  &-header {
+    margin-bottom: 20px;
+
+    &-list {
+      display: flex;
+
+      &__item {
+        margin-right: 30px;
+        padding: 5px;
+        color: #6A8D9C;
+        background: $body-bg;
+        cursor: pointer;
+        transition: .5s;
+
+        &.active {
+          background: #6A8D9C;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  &-body {
+
+    &-item {
+      display: none;
+
+      &-row {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        position: relative;
+        margin-bottom: 30px;
+        padding: 45px 0 20px;
+        border-top: 2px solid $light;
+
+        @media (min-width: map_get($grid-breakpoints, md)) {
+          flex-direction: row;
+          align-items: center;
+          margin-bottom: 60px;
+        }
+
+        .content {
+          max-width: 500px;
+        }
+      }
+
+      .title {
+
+        a {
+          color: #6A8D9C;
+          font-weight: bold;
+        }
+      }
+
+      .info {
+        font-size: 16px;
+
+        &__data {
+          position: relative;
+          margin-right: 15px;
+          padding-right: 15px;
+          font-weight: bold;
+
+          &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 2px;
+            background: #575757;
+          }
+        }
+
+        &__author {
+          color: #575757;
+        }
+
+        &__more {
+
+          a {
+            color: $dark;
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .text {
+        margin-top: 20px;
+        color: #575757;
+      }
+
+      .img {
+        position: relative;
+        margin: 0 0 20px;
+        width: 250px;
+        height: 250px;
+        @extend %img;
+
+        @media (min-width: map_get($grid-breakpoints, lg)) {
+          margin: 0;
+          margin-right: 25px;
+        }
+
+        .btn {
+          @extend %pos;
+          top: auto;
+          display: flex;
+          width: 100%;
+        }
+      }
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+}
