@@ -1,9 +1,13 @@
 <?php
-
+session_start();
 get_header('secondary');
 
 ?>
-
+<?php if ($_SESSION['message']) : ?>
+    <div class="alert alert-<?= $_SESSION['message'] ?> notification">
+        Форма успешно отправлена
+    </div>
+    <?php session_unset(); endif; ?>
     <nav class="archive-nav">
         <div class="container">
             <div class="row">
@@ -106,21 +110,21 @@ get_header('secondary');
                             . '<div class="subtitle">' . __('[:ru]Прими участие в мероприятии ECOCONTROL, помоги Украины[:ua]Візьми участь у заході ECOCONTROL, допожи Україні') . '</div>'
                             . '</div>'
                             . '<div class="single-form-content">'
-                            . '<form>'
+                            . '<form method="POST" action="'.get_theme_file_uri('includes/actions/appeal.php').'">'
                             . '<div class="form-row">'
                             . '<div class="form-group w-100">'
-                            . '<input type="text" class="form-control" id="first-name" placeholder="' . __('[:ru]Имя[:ua]Ім\'я*') . '" require>'
+                            . '<input type="text" class="form-control" name="f_name" id="first-name" placeholder="' . __('[:ru]Имя[:ua]Ім\'я*') . '" require>'
                             . '</div>'
                             . '</div>'
                             . '<div class="form-row">'
                             . '<div class="form-group">'
-                            . '<input type="email" class="form-control" id="email" placeholder="E-mail">'
+                            . '<input type="email" class="form-control" name="email" id="email" placeholder="E-mail">'
                             . '</div>'
                             . '<div class="form-group">'
-                            . '<input type="tel" class="form-control" id="phone" placeholder="Телефон*" require>'
+                            . '<input type="tel" class="form-control" name="phone" id="phone" placeholder="Телефон*" require>'
                             . '</div>'
                             . '</div>'
-                            . '<button type="submit" class="btn btn-primary d-flex mr-0">' . __('[:ru]Принять участие[:ua]Взяти участь') . '</button>'
+                            . '<button type="submit" class="btn btn-primary d-flex mr-0" id="form-btn">' . __('[:ru]Принять участие[:ua]Взяти участь') . '</button>'
                             . '<div class="form-group-checkbox d-flex justify-content-center align-items-center">'
                             . '<div class="custom-control custom-checkbox">'
                             . '<input type="checkbox" class="custom-control-input" id="conditions">'

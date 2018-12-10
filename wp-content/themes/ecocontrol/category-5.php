@@ -22,7 +22,7 @@ get_header(secondary);
                                 'parent' => '',
                                 'orderby' => 'id',
                                 'order' => 'ASC',
-                                'hide_empty' => 0,
+                                'hide_empty' => 1,
                                 'hierarchical' => 1,
                             ]);
                             if ($categories) {

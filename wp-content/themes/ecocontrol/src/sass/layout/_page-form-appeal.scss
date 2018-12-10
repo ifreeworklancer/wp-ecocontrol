@@ -28,3 +28,16 @@
     border: 1px solid $dark;
   }
 }
+
+.alert {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 320px;
+  background: #fff;
+  color: $dark;
+  padding: 30px 40px;
+  text-aling: center;
+  z-index: 20000;
+}

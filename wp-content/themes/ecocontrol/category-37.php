@@ -7,7 +7,7 @@ get_header('light');
 
     <!-- Maps -->
     <div id="eco-maps-intro">
-        <iframe src="https://maphub.net/embed/41999?panel=1" frameborder="0"></iframe>
+        <iframe src="https://maphub.net/embed/41999" frameborder="0"></iframe>
     </div>
     <section id="appeal-maps">
         <div class="container">
@@ -54,7 +54,7 @@ get_header('light');
                                 while ($query->have_posts()) {
                                     $query->the_post();
                                     echo
-                                        '<div class="appeal-maps-slider-col"><a href="#" class="appeal-maps-slider-item">'
+                                        '<div class="appeal-maps-slider-col"><a href="'.get_the_permalink().'" class="appeal-maps-slider-item">'
                                         . '<div class="img" style="background-image: url(' . get_post_first_image_src() . ')"></div>'
                                         . '<div class="data"><div class="data__item">' . get_field('appeal_data') . '</div></div>'
                                         . '</a></div>';
@@ -81,7 +81,7 @@ get_header('light');
                                 while ($query->have_posts()) {
                                     $query->the_post();
                                     echo
-                                        '<div class="appeal-maps-slider-col"><a href="#" class="appeal-maps-slider-item">'
+                                        '<div class="appeal-maps-slider-col"><a href="'.get_the_permalink().'" class="appeal-maps-slider-item">'
                                         . '<div class="img" style="background-image: url(' . get_post_first_image_src() . ')"></div>'
                                         . '<div class="data"><div class="data__item">' . get_field('appeal_data') . '</div></div>'
                                         . '</a></div>';
@@ -108,7 +108,7 @@ get_header('light');
                                 while ($query->have_posts()) {
                                     $query->the_post();
                                     echo
-                                        '<div class="appeal-maps-slider-col"><a href="#" class="appeal-maps-slider-item">'
+                                        '<div class="appeal-maps-slider-col"><a href="'.get_the_permalink().'" class="appeal-maps-slider-item">'
                                         . '<div class="img" style="background-image: url(' . get_post_first_image_src() . ')"></div>'
                                         . '<div class="data"><div class="data__item">' . get_field('appeal_data') . '</div></div>'
                                         . '</a></div>';

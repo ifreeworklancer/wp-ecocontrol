@@ -3,7 +3,13 @@
 * Template name: Принять участие
 * Template type: page
 */
+session_start();
 get_header('light'); ?>
+<?php if ($_SESSION['message']) : ?>
+    <div class="alert alert-<?= $_SESSION['message'] ?> notification">
+        Форма успешно отправлена
+    </div>
+    <?php session_unset(); endif; ?>
 
     <nav class="site-navigations site-navigations--mt">
         <div class="container">
@@ -21,7 +27,7 @@ get_header('light'); ?>
         </div>
     </nav>
 
-    <!-- News -->
+    <!-- Participate -->
     <section id="subscribe">
         <div class="container h-100">
             <div class="row h-100">
@@ -32,23 +38,23 @@ get_header('light'); ?>
                             <div class="subtitle">  <?= __('[:ru]Прими участие в мероприятии ECOCONTROL, помоги Украины[:ua]Візьми участь у заході ECOCONTROL, допоможи Україні') ?></div>
                         </div>
                         <div class="single-form-content">
-                            <form>
+                            <form method="POST" action="<?= get_theme_file_uri('includes/actions/participate.php');?>">
                                 <div class="form-row">
                                     <div class="form-group w-100">
-                                        <input type="text" class="form-control" id="first-name"
+                                        <input type="text" name="f_name" class="form-control" id="first-name"
                                                placeholder="<?= __('[:ru]Имя[:ua]Ім\'я*') ?>" require>
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group">
-                                        <input type="email" class="form-control" id="email" placeholder="E-mail">
+                                        <input type="email" class="form-control" name="email" id="email" placeholder="E-mail">
                                     </div>
                                     <div class="form-group">
-                                        <input type="tel" class="form-control" id="phone" placeholder="Телефон*"
+                                        <input type="tel" class="form-control" name="phone" id="phone" placeholder="Телефон*"
                                                require>
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-primary d-flex mr-0"><?= __('[:ru]Принять участие[:ua]Взяти участь') ?></button>
+                                <button type="submit" class="btn btn-primary d-flex mr-0" id="form-btn"><?= __('[:ru]Принять участие[:ua]Взяти участь') ?></button>
                                 <div class="form-group-checkbox d-flex justify-content-center align-items-center">
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="conditions">

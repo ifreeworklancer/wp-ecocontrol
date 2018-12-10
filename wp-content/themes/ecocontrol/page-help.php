@@ -44,7 +44,7 @@ get_header('simple'); ?>
                                     <?= __('[:ru]Сумма вашего благотворительного взноса:[:ua]Сума вашого благодійного внеску:') ?>
                                 </div>
                                 <div class="form-sum-final-item">
-                                    $ <span id="form-sum-final-value" class="value">200</span>
+                                    <span id="form-sum-final-value" class="value">200</span> грн
                                 </div>
                             </div>
                         </div>

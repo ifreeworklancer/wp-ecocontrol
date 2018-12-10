@@ -90,27 +90,6 @@ require('bootstrap');
     /**
      * Sliders
      */
-    if ($('.intro-slider')) {
-
-        var elem1 = document.querySelector('.intro-slider');
-        if (elem1) {
-
-            const flkty1 = new Flickity(elem1, {
-                prevNextButtons: false,
-                cellAlign: 'left',
-                contain: true,
-                draggable: true,
-                wrapAround: true,
-            });
-
-
-            var nextArrowIntro = document.querySelector('.slider-arrow-item--next-intro');
-
-            nextArrowIntro.addEventListener('click', function () {
-                flkty1.next(true, false);
-            });
-        }
-    }
 
     //Popular
     if ($('.appeal-maps-slider--popular')) {
@@ -184,7 +163,7 @@ require('bootstrap');
             var lon = e.latlng.lng;
 
             $("[name='lat']").val(lat);
-            $("[name='lon']").val(lon);
+            $("[name='lng']").val(lon);
 
             if (theMarker != undefined) {
                 map.removeLayer(theMarker);
@@ -217,5 +196,42 @@ require('bootstrap');
 
 
     }
+
+    if($('#maps-contacts').length > 0) {
+        var contactsElement = document.getElementById('maps-contacts');
+
+        var contactsMap = L.map(contactsElement);
+
+
+        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(contactsMap);
+
+        var contactsLat = $("[name='contactsLat']").val();
+        var contactsLon  = $("[name='contactsLon']").val();
+
+        var contactsTarget = L.latLng(contactsLat, contactsLon);
+
+        contactsMap.setView(contactsTarget, 20);
+
+        L.marker(contactsTarget, {}).addTo(contactsMap);
+
+    }
+
+    if ($('.notification')) {
+        setTimeout(() => {
+            $('.notification').fadeOut();
+        }, 4000);
+    }
+
+    $('#form-btn').attr('disabled','disabled');
+    $('#conditions').change(function() {
+        console.log()
+        if($(this).is(':checked')){
+            $('#form-btn').removeAttr('disabled');
+        } else {
+            $('#form-btn').attr('disabled','disabled');
+        }
+    })
 
 })(jQuery)

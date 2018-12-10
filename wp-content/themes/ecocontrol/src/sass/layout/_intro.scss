@@ -1,99 +1,71 @@
 #intro {
-    height: 500px;
+  height: 500px;
+
+  @media (min-width: map_get($grid-breakpoints, sm)) {
+    height: 700px;
+  }
+
+  .slider-arrow {
+    position: absolute;
+    top: 70%;
+    right: 25px;
+    transform: translateY(-50%);
 
     @media (min-width: map_get($grid-breakpoints, sm)) {
-        height: 700px;
+      top: 50%;
+      right: 60px;
     }
 
-    .slider-arrow {
-        position: absolute;
-        top: 70%;
-        right: 25px;
-        transform: translateY(-50%);
-
-        @media (min-width: map_get($grid-breakpoints, sm)) {
-            top: 50%;
-            right: 60px;
-        }
-
-        @media (min-width: map_get($grid-breakpoints, lg)) {
-            right: 120px;
-        }
-
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      right: 120px;
     }
+
+  }
 }
 
-.intro-slider {
+.intro-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 
-    .flickity-page-dots {
-        bottom: 30px;
+  .img {
+    @extend %pos;
+    @extend %img;
+    z-index: -5;
+  }
 
-        @media (min-width: map_get($grid-breakpoints, sm)) {
-            bottom: 50px;
-            padding-right: 60px;
-            text-align: right;
-        }
+  .content {
+    position: relative;
+    padding: 0 20px;
+    width: 100%;
 
-        @media (min-width: map_get($grid-breakpoints, lg)) {
-            padding-right: 120px;
-        }
-
-        li {
-            background: #fff;
-            opacity: 1;
-            transiton: .5s;
-
-            &.is-selected {
-                background: $primary;
-            }
-
-        }
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      padding-left: 50px;
+      max-width: 70%;
     }
 
-    &-item {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-
-        .img {
-            @extend %pos;
-            @extend %img;
-            z-index: -5;
-        }
-
-        .content {
-            position: relative;
-            padding: 0 20px;
-            width: 100%;
-
-            @media (min-width: map_get($grid-breakpoints, sm)) {
-                padding-left: 50px;
-                max-width: 70%;
-            }
-
-            @media (min-width: map_get($grid-breakpoints, lg)) {
-                padding-left: 120px;
-                max-width: 65%;
-            }
-            
-            .title {
-                margin-bottom: 15px;
-                color: #fff;
-
-                @media (min-width: map_get($grid-breakpoints, sm)) {
-                    font-size: $h2-font-size / 1.3;
-                }
-
-                @media (min-width: map_get($grid-breakpoints, lg)) {
-                    font-size: $h2-font-size / 1.5;
-                }
-
-                @media (min-width: map_get($grid-breakpoints, xl)) {
-                    font-size: $h2-font-size;
-                }
-            }
-        }
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      padding-left: 120px;
+      max-width: 65%;
     }
+
+    .title {
+      margin-bottom: 15px;
+      color: #fff;
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        font-size: $h2-font-size / 1.3;
+      }
+
+      @media (min-width: map_get($grid-breakpoints, lg)) {
+        font-size: $h2-font-size / 1.5;
+      }
+
+      @media (min-width: map_get($grid-breakpoints, xl)) {
+        font-size: $h2-font-size;
+      }
+    }
+  }
 }

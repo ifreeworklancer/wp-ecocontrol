@@ -55,7 +55,7 @@ get_header('light');
                                         .'</div>'
                                         .'<div class="item">'
                                            .' <div class="item-title">Дата контролю:'
-                                               .' <span class="value">'. get_field('data') .'</span>'
+                                               .' <span class="value">'.get_field('appeal_data') .'</span>'
                                             .'</div>'
                                         .'</div>'
                                         .'<div class="status">'. get_field('status') .'</div>'

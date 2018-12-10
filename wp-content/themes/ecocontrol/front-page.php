@@ -9,26 +9,16 @@ get_header();
         <div class="container-fluid p-0 h-100">
             <div class="row h-100">
                 <div class="col-12 p-0 h-100">
-                    <div class="intro-slider h-100">
-                        <?php
-                        $intro_slider = get_field('intro_slider', $main->ID);
-                        foreach ($intro_slider as $item) {
-                            echo
-                                '<div class="intro-slider-item">'
-                                . '<div class="img" style="background-image: url(' . $item['intro_slider_image']['url'] . ')"></div>'
-                                . '<div class="content">'
-                                . '<h2 class="title">' . $item['intro_slider_title'] . '</h2>'
-                                . '<a href="'. get_page_link(27) .'" class="btn btn-primary">' . __('[:ru]поддержать[:ua]підтримати') . '</a>'
-                                . '</div>'
-                                . '</div>';
-                        }
-                        ?>
-                    </div>
-                    <div class="slider-arrow">
-                        <div class="slider-arrow-item slider-arrow-item--next slider-arrow-item--next-intro">
-                            <svg width="20" height="35">
-                                <use xlink:href="#arrow-next-icon"></use>
-                            </svg>
+                    <?php
+                    $intro_slider = get_field('intro_slider', $main->ID);
+                    ?>
+                    <div class="intro-item h-100">
+                        <div class="img"
+                             style="background-image: url(<?= $intro_slider['intro_slider_image']['url'] ?>)"></div>
+                        <div class="content">'
+                            <h2 class="title"><?= $intro_slider['intro_slider_title'] ?></h2>
+                            <a href="'. get_page_link(27) .'"
+                               class="btn btn-primary"><?= __('[:ru]поддержать[:ua]підтримати') ?></a>
                         </div>
                     </div>
                 </div>
@@ -176,17 +166,17 @@ $third_join_card = get_field('third_join_card', $main->ID);
                 echo
                 '<div class="row';
                 if ($count % 2 == 1) {
-                    echo " justify-content-center align-items-center";
+                    echo " justify-content-end align-items-center";
                 }
                 echo '">';
                 if ($count == 1) {
                     echo
-                        '<div class="col-sm-8 col-xl-5 mb-5 mb-xl-0">'
+                        '<div class="col-sm-8 col-xl-4 mb-5 mb-xl-0">'
                         . '<h2 class="section-title text-white">' . __('[:ru]Технологии которые мы популяризируем[:ua]Технології які ми популяризуємо') . '</h2>'
                         . '</div>';
                 }
                 echo '<div class="';
-                if ($count == 1) echo "col-sm-11 col-lg-9 col-xl-7"; elseif ($count != 0) echo "col-sm-12 col-lg-9 col-xl-8";
+                if ($count == 1) echo "col-sm-11 col-lg-9 col-xl-8"; elseif ($count != 0) echo "col-sm-12 col-lg-9 col-xl-8";
 
                 echo '">'
                     . '<div class="technology-item">'
@@ -269,21 +259,21 @@ $help_text = get_field('help_text', $main->ID);
                     <div class="help-item">
                         <div class="help-item-title">
                             <h4 class="title">
-                                <?= $help_title;?>
+                                <?= $help_title; ?>
                             </h4>
                             <div class="logo logo--simple"
                                  style="background-image:url('<?= get_theme_file_uri('images/icon/logo/logo-simple.png') ?>');"></div>
                         </div>
                         <h6 class="subtitle">
-                            <?= $help_subtitle;?>
+                            <?= $help_subtitle; ?>
                         </h6>
                         <p>
-                            <?= $help_text;?>
+                            <?= $help_text; ?>
                         </p>
                     </div>
                 </div>
                 <div class="col-auto mt-4 mt-sm-0">
-                    <a href="<?= get_page_link(29)?>" class="btn btn-primary">
+                    <a href="<?= get_page_link(29) ?>" class="btn btn-primary">
                         <?= __('[:ru]оставить[:ua]залишити') ?>
                     </a>
                 </div>
@@ -325,7 +315,7 @@ $help_text = get_field('help_text', $main->ID);
                         . '<div class="img" style="background-image:url(' . get_post_first_image_src() . ');"></div>'
                         . '<div class="content">'
                         . '<h6 class="title"><a href="' . get_post_permalink() . '">' . __($post->post_title) . '</a></h6>'
-                        . '<div class="author">'. get_field('news_author') .'</div>'
+                        . '<div class="author">' . get_field('news_author') . '</div>'
                         . '</div>'
                         . '</div>'
                         . '</div>';
@@ -362,12 +352,12 @@ $help_text = get_field('help_text', $main->ID);
                         '<div class="col-sm-7 col-lg-4">'
                         . '<div class="custom-post-prev custom-post-prev--events">'
                         . '<div class="img" style="background-image:url(' . get_post_first_image_src() . ');">'
-                        . '<a href="' . get_page_link(31) . '" class="btn btn-primary">'. __('[:ru]принять участие[:ua]взяти участь') .'</a>'
+                        . '<a href="' . get_page_link(31) . '" class="btn btn-primary">' . __('[:ru]принять участие[:ua]взяти участь') . '</a>'
                         . '</div>'
                         . '<div class="content">'
                         . '<h6 class="title"><a href="' . get_post_permalink() . '">' . __($post->post_title) . '</a></h6>'
-                        . '<div class="data">'. __('[:ru]Запланировано[:ua]Заплановано') . '<span class="data__value">' .get_field('events_data') .'</span></div>'
-                        . '<div class="place">'. get_field('events_place') .'</div>'
+                        . '<div class="data">' . __('[:ru]Запланировано[:ua]Заплановано') . '<span class="data__value">' . get_field('events_data') . '</span></div>'
+                        . '<div class="place">' . get_field('events_place') . '</div>'
                         . '</div>'
                         . '</div>'
                         . '</div>';
