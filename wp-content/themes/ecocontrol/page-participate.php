@@ -9,11 +9,13 @@ get_header('light'); ?>
         <div class="container">
             <div class="row">
                 <div class="col-12 pl-4">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item"><a href="#">Library</a></li>
-                        <li class="breadcrumb-item">Data</li>
-                    </ol>
+                    <div class="breadcrumb">
+                        <?php
+                        if (function_exists('bcn_display')) {
+                            bcn_display();
+                        }
+                        ?>
+                    </div>
                 </div>
             </div>
         </div>
@@ -26,15 +28,15 @@ get_header('light'); ?>
                 <div class="col-12 col-lg-10 mx-auto d-flex align-items-center justify-content-center">
                     <div class="single-form">
                         <div class="single-form-header">
-                            <div class="title">Разом ми зробимо країну краще</div>
-                            <div class="subtitle">Візьми участь у заході ECOCONTROL, допожи Україні</div>
+                            <div class="title">  <?= __('[:ru]Вместе мы сделаем страну лучше[:ua]Разом ми зробимо країну краще') ?></div>
+                            <div class="subtitle">  <?= __('[:ru]Прими участие в мероприятии ECOCONTROL, помоги Украины[:ua]Візьми участь у заході ECOCONTROL, допоможи Україні') ?></div>
                         </div>
                         <div class="single-form-content">
                             <form>
                                 <div class="form-row">
                                     <div class="form-group w-100">
-                                        <input type="text" class="form-control" id="first-name" placeholder="Ім'я*"
-                                               require>
+                                        <input type="text" class="form-control" id="first-name"
+                                               placeholder="<?= __('[:ru]Имя[:ua]Ім\'я*') ?>" require>
                                     </div>
                                 </div>
                                 <div class="form-row">
@@ -46,12 +48,11 @@ get_header('light'); ?>
                                                require>
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-primary d-flex mr-0">Взяти участь</button>
+                                <button type="submit" class="btn btn-primary d-flex mr-0"><?= __('[:ru]Принять участие[:ua]Взяти участь') ?></button>
                                 <div class="form-group-checkbox d-flex justify-content-center align-items-center">
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="conditions">
-                                        <label class="custom-control-label" for="conditions">Я приймаю умови <a
-                                                    href="#">Договору-оферти</a></label>
+                                        <label class="custom-control-label" for="conditions"><?= __('[:ru]Я принимаю условия[:ua]Я приймаю умови ') ?><a href="#"><?= __('[:ru]Договора-оферты[:ua]Договору-оферти') ?></a></label>
                                     </div>
                                 </div>
                             </form>

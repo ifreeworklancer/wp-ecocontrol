@@ -13,11 +13,14 @@ get_header('light');
         <div class="container">
             <div class="row">
                 <div class="col-12 pl-4">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item"><a href="#">Library</a></li>
-                        <li class="breadcrumb-item">Data</li>
-                    </ol>
+                    <div class="breadcrumb">
+                        <?php
+                        if(function_exists('bcn_display'))
+                        {
+                            bcn_display();
+                        }
+                        ?>
+                    </div>
                 </div>
             </div>
         </div>
@@ -31,27 +34,27 @@ get_header('light');
                     <div class="content content-form">
                         <div class="form-header">
                             <h3 class="form-header__title">
-                                Разом ми сильніші
+                                <?= __('[:ru]Вместе мы сильнее[:ua]Разом ми сильніші') ?>
                             </h3>
                             <div class="form-header__subtitle">
-                                Стань волонтером ECOCONTROL, допожи Україні
+                                <?= __('[:ru]Стань волонтером ECOCONTROL, помоги Украины[:ua]Стань волонтером ECOCONTROL, допоможи Україні') ?>
                             </div>
                         </div>
                         <form>
                             <div class="form-row">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="last-name" placeholder="Прізвисько">
+                                    <input type="text" class="form-control" id="last-name" placeholder="<?= __('[:ru]Фамилия[:ua]Прізвище') ?>">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="first-name" placeholder="Ім'я*" require>
+                                    <input type="text" class="form-control" id="first-name" placeholder="<?= __('[:ru]Имя[:ua]Ім\'я*') ?>" require>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="patronymic" placeholder="По батькові">
+                                    <input type="text" class="form-control" id="patronymic" placeholder="<?= __('[:ru]Отчество[:ua]По батькові') ?>">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="birthday" placeholder="Дата народження">
+                                    <input type="text" class="form-control" id="birthday" placeholder="<?= __('[:ru]День рождения[:ua]Дата народження') ?>">
                                 </div>
                             </div>
                             <div class="form-row">
@@ -64,37 +67,42 @@ get_header('light');
                             </div>
                             <div class="form-row">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="region" placeholder="Регіон">
+                                    <input type="text" class="form-control" id="region" placeholder="<?= __('[:ru]Регион[:ua]Регіон') ?>">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="city" placeholder="Місто">
+                                    <input type="text" class="form-control" id="city" placeholder="<?= __('[:ru]Город[:ua]Місто') ?>">
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group form-group--small">
-                                    <input type="text" class="form-control" id="index" placeholder="Індекс">
+                                    <input type="text" class="form-control" id="index" placeholder="<?= __('[:ru]Индекс[:ua]Індекс') ?>">
                                 </div>
                                 <div class="form-group form-group--big">
-                                    <input type="text" class="form-control" id="outside" placeholder="Вулиця">
+                                    <input type="text" class="form-control" id="outside" placeholder="<?= __('[:ru]Улица[:ua]Вулиця') ?>">
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="house" placeholder="Дім">
+                                    <input type="text" class="form-control" id="house" placeholder="<?= __('[:ru]Дом[:ua]Дім') ?>">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="entrance" placeholder="Підїзд">
+                                    <input type="text" class="form-control" id="entrance" placeholder="<?= __('[:ru]Подъезд[:ua]Підїзд') ?>">
                                 </div>
                                 <div class="form-group">
                                     <input type="text" class="form-control" id="apartment" placeholder="Квартира">
                                 </div>
                             </div>
+                            <div class="form-row">
+                                <div class="form-group form-group--strong w-100">
+                                    <input type="text" class="form-control" id="adress" placeholder="<?= __('[:ru]Адрес[:ua]Адреса') ?>">
+                                </div>
+                            </div>
                             <input type="hidden" value="subscibe">
-                            <button type="submit" class="btn btn-primary d-flex">Стати волонтером</button>
+                            <button type="submit" class="btn btn-primary d-flex"><?= __('[:ru]Стать волонетером[:ua]Стати волонтером') ?></button>
                             <div class="form-group-checkbox d-flex justify-content-center align-items-center">
                                 <div class="custom-control custom-checkbox">
                                     <input type="checkbox" class="custom-control-input" id="conditions">
-                                    <label class="custom-control-label" for="conditions">Я приймаю умови <a href="#">Договору-оферти</a></label>
+                                    <label class="custom-control-label" for="conditions"><?= __('[:ru]Я принимаю условия[:ua]Я приймаю умови ') ?><a href="#"><?= __('[:ru]Договора-оферты[:ua]Договору-оферти') ?></a></label>
                                 </div>
                             </div>
                         </form>

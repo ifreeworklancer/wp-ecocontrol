@@ -63,12 +63,16 @@
                             </a>
                         </li>
                     </ul>
-                    <ul class="languages-list">
-                        <li>
-                            RU
-                        </li>
-                    </ul>
-                    <a href="page-help.php" class="btn btn-danger">
+                    <?php
+                    wp_nav_menu(array(
+                        'theme_location' => 'languages_menu',
+                        'container' => false,
+                        'menu_class' => 'languages-list',
+                        'items_wrap' => '<ul class="%2$s">%3$s</ul>',
+                        'depth' => 0,
+                    ));
+                    ?>
+                    <a href="<?= get_page_link(27);?>" class="btn btn-danger">
                         <?= __('[:ru]Поддержать[:ua]Підтримати') ?>
                     </a>
                 </div>
@@ -79,32 +83,15 @@
 
 <div class="menu">
     <nav class="menu-nav">
-        <ul class="menu-nav-list">
-            <li>
-                <a href="#">Екологічні катастрофи</a>
-            </li>
-            <li>
-                <a href="category-3.php">Екологічні новини</a>
-            </li>
-            <li>
-                <a href="category-37.php">Еко мапи</a>
-            </li>
-            <li>
-                <a href="single.php">Технології</a>
-            </li>
-            <li>
-                <a href="category-5.php">Еко календар</a>
-            </li>
-            <li>
-                <a href="category-6.php">Еко заклади</a>
-            </li>
-            <li>
-                <a href="category-4.php">Заходи ECOCONTROL</a>
-            </li>
-            <li>
-                <a href="#">Цікаві факти</a>
-            </li>
-        </ul>
+        <?php
+        wp_nav_menu(array(
+            'theme_location' => 'burger_menu',
+            'container' => false,
+            'menu_class' => 'menu-nav-list',
+            'items_wrap' => '<ul class="%2$s">%3$s</ul>',
+            'depth' => 0,
+        ));
+        ?>
     </nav>
 </div>
 

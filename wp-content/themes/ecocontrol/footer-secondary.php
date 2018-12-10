@@ -81,7 +81,7 @@
                             <a href="<?php echo get_theme_mod('email') ?>"> <?php echo get_theme_mod('email') ?></a>
                         </li>
                         <li>
-                            <a href="#">Проспект перемоги 7, Київ</a>
+                            <a href="#"><?php echo get_theme_mod('address') ?></a>
                         </li>
                     </ul>
                     <div class="footer-copyr">

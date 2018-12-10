@@ -8,6 +8,8 @@ function theme_setup()
         [
             'main_menu' => 'Главное меню',
             'footer_menu' => 'Меню футера',
+            'burger_menu' => 'Скрытое меню',
+            'languages_menu' => 'Языковое меню',
         ]
     );
 }
