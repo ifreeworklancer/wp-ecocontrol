@@ -18,9 +18,9 @@
 <header id="app-header" class="header-secondary">
     <div class="container-fluid">
         <div class="row justify-content-between align-items-center">
-            <div class="col-sm-5">
+            <div class="col-sm-5 pl-2 pl-xl-5">
                 <div class="site-nav d-flex align-items-center">
-                    <div class="burger-menu position-relative d-flex flex-column justify-content-center align-items-center">
+                    <div class="burger-menu position-relative d-flex d-xl-none flex-column justify-content-center align-items-center">
                         <div class="line line--top"></div>
                         <div class="line line--middle"></div>
                         <div class="line line--bottom"></div>

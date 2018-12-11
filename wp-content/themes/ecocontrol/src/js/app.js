@@ -59,10 +59,12 @@ require('bootstrap');
         $(this).addClass('active');
         $('#sum-value').val($(this).data('value'));
         $('#form-sum-final-value').text($('#sum-value').val());
+        $("[name='v_help']").val($('#sum-value').val());
     })
 
     $('#sum-value').change(function () {
         $('#form-sum-final-value').text($(this).val())
+        $("[name='v_help']").val($(this).val());
     })
 
     /**

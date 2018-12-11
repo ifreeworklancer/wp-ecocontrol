@@ -17,7 +17,7 @@ get_header();
                              style="background-image: url(<?= $intro_slider['intro_slider_image']['url'] ?>)"></div>
                         <div class="content">'
                             <h2 class="title"><?= $intro_slider['intro_slider_title'] ?></h2>
-                            <a href="'. get_page_link(27) .'"
+                            <a href="<?=get_page_link(27)?>"
                                class="btn btn-primary"><?= __('[:ru]поддержать[:ua]підтримати') ?></a>
                         </div>
                     </div>

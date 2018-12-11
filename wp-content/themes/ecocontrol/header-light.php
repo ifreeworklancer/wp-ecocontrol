@@ -12,14 +12,14 @@
 <body <?php body_class(); ?>>
 
 
-<?php require_once('includes/partials/svgs.php');?>
+<?php require_once('includes/partials/svgs.php'); ?>
 
 <header id="app-header" class="header-light">
     <div class="container-fluid">
         <div class="row justify-content-between align-items-center">
-            <div class="col-sm-5">
+            <div class="col-sm-5 pl-2 pl-xl-5">
                 <div class="site-nav d-flex align-items-center">
-                    <div class="burger-menu position-relative d-flex flex-column justify-content-center align-items-center">
+                    <div class="burger-menu position-relative d-flex d-xl-none flex-column justify-content-center align-items-center">
                         <div class="line line--top"></div>
                         <div class="line line--middle"></div>
                         <div class="line line--bottom"></div>
@@ -36,7 +36,8 @@
                     </ul>
                 </div>
             </div>
-            <a href="/" class="logo" style="background-image: url('<?= get_theme_file_uri('images/icon/logo/logo-header.png') ?>')"></a>
+            <a href="/" class="logo"
+               style="background-image: url('<?= get_theme_file_uri('images/icon/logo/logo-header.png') ?>')"></a>
             <div class="col-sm-5 col-lg-4 pr-sm-0 d-none d-md-block">
                 <div class="social-nav d-flex justify-content-end align-items-center">
                     <ul class="social-list social-list--special">
@@ -71,7 +72,7 @@
                         'depth' => 0,
                     ));
                     ?>
-                    <a href="<?= get_page_link(27);?>" class="btn btn-danger">
+                    <a href="<?= get_page_link(27); ?>" class="btn btn-danger">
                         <?= __('[:ru]Поддержать[:ua]Підтримати') ?>
                     </a>
                 </div>

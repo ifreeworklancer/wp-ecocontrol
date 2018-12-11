@@ -4,13 +4,13 @@ session_start();
 if (isset($_POST)) {
 
     $to = 'go.control.ua@gmail.com';
-    $subject = "Форма заявки со страницы 'Стать волонтером'";
+    $subject = "Форма заявки со страницы 'Принять участие'";
 
     $name = $_POST['f_name'];
     $email = $_POST['email'] ?? null;
     $phone = $_POST['phone'];
 
-    $message = "Форма заявки со страницы 'Форма обращения'";
+    $message = "Форма заявки со страницы 'Принять участие'";
     $message .= "<p>Имя: {$name}</p>";
     $message .= "<p>Телефон: {$phone}</p>";
     if ($email) {

@@ -18,7 +18,12 @@
 
   .title {
     max-width: 110px;
-    font-weight: 200;
+    font-weight: bold;
     line-height: 1.1;
+    color: $dark;
+
+    &:hover {
+      color: $dark;
+    }
   }
 }

@@ -59,7 +59,7 @@ get_header('light');
                                             .'</div>'
                                         .'</div>'
                                         .'<div class="status">'. get_field('status') .'</div>'
-                                       .' <a href="#" class="send-appeal">'.__('[:ru]подать обращение[:ua]подати звернення[:]').'</a>'
+                                       .' <a href="'. get_the_permalink(29) .'" class="send-appeal">'.__('[:ru]подать обращение[:ua]подати звернення[:]').'</a>'
                                      .'<input type="hidden" name="appealLat" value="'. get_field('coordinates')['lat'] . '">'
                                      .'<input type="hidden" name="appealLon" value="'. get_field('coordinates')['lon'] .'">'
                                     .'</div>';

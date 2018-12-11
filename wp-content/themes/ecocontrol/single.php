@@ -110,7 +110,7 @@ get_header('secondary');
                             . '<div class="subtitle">' . __('[:ru]Прими участие в мероприятии ECOCONTROL, помоги Украины[:ua]Візьми участь у заході ECOCONTROL, допожи Україні') . '</div>'
                             . '</div>'
                             . '<div class="single-form-content">'
-                            . '<form method="POST" action="'.get_theme_file_uri('includes/actions/appeal.php').'">'
+                            . '<form method="POST" action="'.get_theme_file_uri('includes/actions/participate.php').'">'
                             . '<div class="form-row">'
                             . '<div class="form-group w-100">'
                             . '<input type="text" class="form-control" name="f_name" id="first-name" placeholder="' . __('[:ru]Имя[:ua]Ім\'я*') . '" require>'
