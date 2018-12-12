@@ -55,7 +55,7 @@ get_header('light');
                                     $query->the_post();
                                     echo
                                         '<div class="appeal-maps-slider-col"><a href="'.get_the_permalink().'" class="appeal-maps-slider-item">'
-                                        . '<div class="img" style="background-image: url(' . get_post_first_image_src() . ')"></div>'
+                                       .get_the_post_thumbnail()
                                         . '<div class="data"><div class="data__item">' . get_field('appeal_data') . '</div></div>'
                                         . '</a></div>';
                                 }
@@ -82,7 +82,7 @@ get_header('light');
                                     $query->the_post();
                                     echo
                                         '<div class="appeal-maps-slider-col"><a href="'.get_the_permalink().'" class="appeal-maps-slider-item">'
-                                        . '<div class="img" style="background-image: url(' . get_post_first_image_src() . ')"></div>'
+                                        .get_the_post_thumbnail()
                                         . '<div class="data"><div class="data__item">' . get_field('appeal_data') . '</div></div>'
                                         . '</a></div>';
                                 }
@@ -109,7 +109,7 @@ get_header('light');
                                     $query->the_post();
                                     echo
                                         '<div class="appeal-maps-slider-col"><a href="'.get_the_permalink().'" class="appeal-maps-slider-item">'
-                                        . '<div class="img" style="background-image: url(' . get_post_first_image_src() . ')"></div>'
+                                        .get_the_post_thumbnail()
                                         . '<div class="data"><div class="data__item">' . get_field('appeal_data') . '</div></div>'
                                         . '</a></div>';
                                 }

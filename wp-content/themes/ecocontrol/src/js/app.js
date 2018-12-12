@@ -1,13 +1,13 @@
-import jquery from 'jquery';
+// import jquery from 'jquery';
 import Flickity from 'flickity';
-import ScrollReveal from 'scrollreveal'
 import 'flickity/dist/flickity.css';
 
-window.jQuery = window.$ = jquery;
+
+// window.jQuery = window.$ = jquery;
 
 require('bootstrap');
 
-(function () {
+(function ($) {
 
     /**
      * Burger-menu

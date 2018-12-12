@@ -412,3 +412,29 @@
   }
 }
 
+.gallery {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: map_get($grid-breakpoints, lg)) {
+    flex-direction: row;
+  }
+}
+
+.gallery-item {
+  float: none !important;
+  width: 100% !important;
+  max-width: 200px !important;
+  margin: 0 auto 25px !important;
+
+  @media (min-width: map_get($grid-breakpoints, lg)) {
+    margin: 0 25px !important;
+  }
+
+  img {
+    border: none !important;
+    width: 100% !important;
+    max-width: 200px !important;
+    height: auto !important;
+  }
+}

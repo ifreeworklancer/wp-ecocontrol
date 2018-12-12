@@ -90,15 +90,7 @@
     }
 
     &-item {
-      margin: 0 auto 20px;
-      width: 60%;
-      height: 135px;
-      @extend %img;
 
-      @media (min-width: map_get($grid-breakpoints, sm)) {
-        width: 25%;
-        margin: 0 25px;
-      }
     }
   }
 }
