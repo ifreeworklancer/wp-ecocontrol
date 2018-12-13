@@ -66,12 +66,12 @@ get_header('secondary');
                     <div class="single-content">
                         <?php while (have_posts()) : the_post();
                             echo '<h3>' . get_the_title() . '</h3>';
-                            if (in_category(4)) {
+                            if (in_category(4) || in_category(45)) {
                                 echo
                                     '<div class="single-content__data">' . get_field('events_data') . '</div>';
                             }
 
-                            if (in_category(3)) {
+                            if (in_category(3) || in_category(43) || in_category(44)) {
                                 echo
                                     '<div class="single-content__data">' . get_field('news_data') . '</div>';
                             }
@@ -102,7 +102,7 @@ get_header('secondary');
                         endwhile; ?>
                     </div>
                     <?php
-                    if (in_category(4)) {
+                    if (in_category(4) || in_category(45)) {
                         echo
                             '<div class="single-form">'
                             . '<div class="single-form-header">'
