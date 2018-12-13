@@ -29,7 +29,7 @@ get_header(secondary);
                                     <div class="news-tabs-body-item">
                                         <?php
                                         $args = array(
-                                            'cat' => 45,
+                                            'category_name' => 'actions',
                                             'post_status' => 'future'
                                         );
 
@@ -73,7 +73,7 @@ get_header(secondary);
                                     <div class="news-tabs-body-item">
                                         <?php
                                         $args = array(
-                                            'cat' => 45,
+                                            'category_name' => 'actions',
                                             'post_status' => 'publish'
                                         );
 

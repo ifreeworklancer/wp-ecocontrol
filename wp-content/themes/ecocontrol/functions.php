@@ -157,3 +157,9 @@ function theme_customize_register($wp_customize)
 }
 
 add_action('customize_register', 'theme_customize_register');
+
+if (!function_exists('convert_month')) {
+    function convert_month($month) {
+        return date_i18n('F', strtotime(DateTime::createFromFormat('!m', $month)->format('Y-m-d')));
+    }
+}

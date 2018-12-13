@@ -28,7 +28,7 @@ get_header('secondary');
                                     <div class="news-tabs-body-item">
                                         <?php
                                         $args = array(
-                                            'cat' => 44,
+                                            'category_name' => 'right',
                                             'posts_per_page' => 3,
                                         );
 
@@ -57,7 +57,7 @@ get_header('secondary');
                                     <div class="news-tabs-body-item">
                                         <?php
                                         $args = array(
-                                            'cat' => 44,
+                                            'category_name' => 'right',
                                             'offset' => 3,
                                         );
 

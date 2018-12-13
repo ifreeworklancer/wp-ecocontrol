@@ -1,0 +1,23 @@
+#archive-report {
+  padding-top: 110px;
+
+  .filter {
+    margin-bottom: 15px;
+    text-align: center;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      padding: 0 80px;
+    }
+
+    a {
+      display: inline-block;
+      color: $dark;
+      margin: 0 10px;
+      text-decoration: underline;
+
+      &.active {
+        font-weight: bold;
+      }
+    }
+  }
+}
