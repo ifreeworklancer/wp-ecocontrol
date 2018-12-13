@@ -91,7 +91,7 @@ $current_year = !empty($_GET['report_year']) ? $_GET['report_year'] : get_the_da
                             echo
                                 '<tr>'
                                 . '<td>' . get_the_title() . '</td>'
-                                . '<td class="bg-light">' . date_i18n(('d.m.Y')) . '</td>'
+                                . '<td class="bg-light">' .  date('d.m.Y', strtotime($post->post_date)) . '</td>'
                                 . '<td>' . get_field('report_value') . ' грн</td>'
                                 . '</tr>';
                         }
