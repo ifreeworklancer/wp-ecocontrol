@@ -22,7 +22,7 @@
                 echo '</h5>'
                     . '</div>'
                     . '<div class="custom-card-body">'
-                    . '<a href="' . get_the_permalink() . '" class="btn btn-primary">' . __('[:ru]присоединиться[:ua]приэднатися') . '</a>'
+                    . '<a href="' . get_the_permalink() . '" class="btn btn-primary">' . __('[:ru]присоединиться[:ua]приєднатися') . '</a>'
                     . '<div class="img img--big" style="background-image:url(' . get_post_first_image_src() . ')"></div>'
                     . '</div>'
                     . '</div>'

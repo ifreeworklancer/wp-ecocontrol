@@ -124,7 +124,7 @@ $third_join_card = get_field('third_join_card', $main->ID);
                         </div>
                         <div class="custom-card-body">
                             <a href="<?= get_page_link(9); ?>"
-                               class="btn btn-primary"><?= __('[:ru]присоедниться[:ua]приэднатися') ?></a>
+                               class="btn btn-primary"><?= __('[:ru]присоедниться[:ua]приєднатися') ?></a>
                             <div class="img img--big"
                                  style="background-image:url(<?= $second_join_card['image']['url'] ?>)"></div>
                         </div>
@@ -136,7 +136,7 @@ $third_join_card = get_field('third_join_card', $main->ID);
                             <h5 class="title"><?= $third_join_card['title'] ?></h5>
                         </div>
                         <div class="custom-card-body">
-                            <a href="<?= get_page_link(27); ?>"
+                            <a href="<?= get_page_link(1043); ?>"
                                class="btn btn-primary"><?= __('[:ru]сберечь[:ua]зберегти') ?></a>
                             <div class="img img--big"
                                  style="background-image:url(<?= $third_join_card['image']['url'] ?>);"></div>

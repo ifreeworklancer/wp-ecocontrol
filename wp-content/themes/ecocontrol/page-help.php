@@ -12,13 +12,10 @@ get_header('simple'); ?>
     <?php session_unset(); endif; ?>
 
     <!-- News -->
-    <section id="page-help">
+    <section id="page-help" class="pt-5">
         <div class="container h-100">
             <div class="row h-100">
                 <div class="col-sm-10 col-lg-8 mx-auto d-flex align-items-center justify-content-center">
-                    <div class="description">
-                        <?= __('[:ru]Мы работаем только на частные пожертвования граждан и не принимаем финансирования от коммерческих, государственных и политических организаций[:ua]Ми працюємо тільки на приватні пожертвування громадян і не приймаємо фінансування від комерційних, державних і політичних організацій[:]') ?>
-                    </div>
                     <div class="content content-form">
                         <div class="form-header">
                             <a href="/" class="logo"
