@@ -13,7 +13,7 @@ get_header('secondary');
                 <div class="col-12">
                     <div class="archive-nav-outer">
                         <div class="news-theme-nav__title mb-3">
-                            <?= __('[:ru]Город[:ua]Місто')?>
+                            <?= __('[:ru]Город[:ua]Місто') ?>
                         </div>
                         <form action="" method="GET" id="city">
                             <input type="hidden" name="categories" value="">
@@ -31,8 +31,8 @@ get_header('secondary');
                                 foreach ($categories as $cat) {
                                     echo '<div class="custom-control custom-checkbox">'
                                         . '<input type="checkbox" class="custom-control-input"
-                                        id="' . $cat->cat_ID . '" onchange="onCategoryChange('. $cat->cat_ID .')"
-                                        '. (in_array($cat->cat_ID, explode(',', $currentCategory)) ? ' checked' : '') .'
+                                        id="' . $cat->cat_ID . '" onchange="onCategoryChange(' . $cat->cat_ID . ')"
+                                        ' . (in_array($cat->cat_ID, explode(',', $currentCategory)) ? ' checked' : '') . '
                                         >'
                                         . '<label class="custom-control-label" for="' . $cat->cat_ID . '">' . $cat->name . '</label>'
                                         . '</div>';
@@ -53,9 +53,19 @@ get_header('secondary');
                 <div class="col-sm-12 col-lg-9 ml-auto">
                     <div class="content">
                         <div class="content-header mb-5">
-                            <div class="quote">
-                                <h4 class="quote__text"><?= __('[:ru]Чем больше дров, тем дальше лес[:ua]Чим більше дров, тим далі ліс') ?></h4>
-                                <div class="quote__author"><?= __('[:ru]Александр Жуков[:ua]Олександр Жуков') ?></div>
+                            <div class="quote-slider">
+                                <div class="quote-slider-item">
+                                    <h5 class="quote-slider-item__text"><?= __('[:ru]Человеком была сделана огромная ошибка в том, что он отделил себя от законов природы и перестал с ними считаться[:ua]Людиною була зроблена величезна помилка в тому, що він відділив себе від законів природи і перестав з ними рахуватися') ?></h5>
+                                    <div class="quote-slider-item__author"><?= __('[:ru]В.И.Вернадский[:ua]В.І.Вернадський') ?></div>
+                                </div>
+                                <div class="quote-slider-item">
+                                    <h5 class="quote-slider-item__text"><?= __('[:ru]Природа всегда права. Ошибки исходят от людей[:ua]Природа завжди права. Помилки виходять від людей') ?></h5>
+                                    <div class="quote-slider-item__author"><?= __('[:ru]Иоганн Вольфганг фон Гёте[:ua]Йоганн Вольфганг фон Гете') ?></div>
+                                </div>
+                                <div class="quote-slider-item">
+                                    <h5 class="quote-slider-item__text"><?= __('[:ru]Природа всегда действует не спеша и по-своему экономно[:ua]Природа завжди діє не поспішаючи і по-своєму економно') ?></h5>
+                                    <div class="quote-slider-item__author"><?= __('[:ru]Шарль-Луи Монтескье[:ua]Шарль-Луї Монтеск\'є') ?></div>
+                                </div>
                             </div>
                             <h2 class="section-title">
                                 <?= __('[:ru]ЭКО заведения[:ua]ЕКО заклади') ?>
@@ -78,7 +88,7 @@ get_header('secondary');
                                     $query->the_post();
                                     echo '<div class="single-card">'
                                         . '<div class="content order-2 order-md-1">'
-                                        . '<h5 class="title"><a href="'.get_the_permalink().'">' . get_the_title() . '</a></h5>'
+                                        . '<h5 class="title"><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h5>'
                                         . '<div class="info">'
                                         . '<div class="info__faculty mb-1">' . get_field('institute_faculty') . '</div>'
                                         . '<div class="d-flex align-items-center">'
@@ -93,15 +103,15 @@ get_header('secondary');
                                 }
                             }
                             $args = array(
-                                'show_all'     => false,
-                                'end_size'     => 1,
-                                'mid_size'     => 1,
-                                'prev_next'    => true,
-                                'prev_text'    => __(''),
-                                'next_text'    => __(''),
-                                'add_args'     => false,
+                                'show_all' => false,
+                                'end_size' => 1,
+                                'mid_size' => 1,
+                                'prev_next' => true,
+                                'prev_text' => __(''),
+                                'next_text' => __(''),
+                                'add_args' => false,
                                 'add_fragment' => '',
-                                'screen_reader_text' => __( 'Posts navigation' ),
+                                'screen_reader_text' => __('Posts navigation'),
                             );
                             the_posts_pagination($args);
                             wp_reset_postdata();

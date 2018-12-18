@@ -144,6 +144,25 @@ require('bootstrap');
         }
     }
 
+    if ($('.quote-slider')) {
+
+        var elem4 = document.querySelector('.quote-slider');
+        if (elem4) {
+
+            const flkty4 = new Flickity(elem4, {
+                prevNextButtons: false,
+                cellAlign: 'left',
+                contain: true,
+                wrapAround: true,
+                draggable: false,
+                pageDots: false,
+                adaptiveHeight: true,
+                autoPlay: 2500,
+                pauseAutoPlayOnHover: false
+            });
+        }
+    }
+
     //maps
     if($('#page-form-appeal__maps').length > 0) {
         var element = document.getElementById('page-form-appeal__maps');

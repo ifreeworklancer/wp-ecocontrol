@@ -74,9 +74,10 @@ $current_year = !empty($_GET['report_year']) ? $_GET['report_year'] : get_the_da
                     <table class="table table-bordered table-responsive-md text-center">
                         <thead>
                         <tr>
-                            <th scope="col"><?= __('[:ru]На что потрачено[:ua]На що витрачено[:]') ?></th>
-                            <th scope="col" class="bg-light"><?= __('[:ru]Когда потрачено[:ua]Коли витрачено[:]') ?></th>
-                            <th scope="col"><?= __('[:ru]Сколько потрачено[:ua]Скільки витрачено[:]') ?></th>
+                            <th scope="col"><?= __('[:ru]№ п/п[:ua]№ п/п[:]') ?></th>
+                            <th scope="col"><?= __('[:ru]Название расходов[:ua]Назва витрат[:]') ?></th>
+                            <th scope="col" class="bg-light"><?= __('[:ru]Сумма, грн[:ua]Сума, грн[:]') ?></th>
+                            <th scope="col"><?= __('[:ru]Дата[:ua]Дата[:]') ?></th>
                         </tr>
                         </thead>
                         <tbody>
@@ -86,13 +87,16 @@ $current_year = !empty($_GET['report_year']) ? $_GET['report_year'] : get_the_da
                             'year' => !empty($_GET['report_year']) ? $_GET['report_year'] : get_the_date('Y'),
                             'monthnum' => !empty($_GET['report_month']) ? $_GET['report_month'] : null,
                         ]));
+                        $count;
                         while ($query->have_posts()) {
                             $query->the_post();
+                            $count++;
                             echo
                                 '<tr>'
+                                . '<td>' . $count . '</td>'
                                 . '<td>' . get_the_title() . '</td>'
-                                . '<td class="bg-light">' .  date('d.m.Y', strtotime($post->post_date)) . '</td>'
-                                . '<td>' . get_field('report_value') . ' грн</td>'
+                                . '<td class="bg-light">' . get_field('report_value') . ' грн</td>'
+                                . '<td>' .  date('d.m.Y', strtotime($post->post_date)) . '</td>'
                                 . '</tr>';
                         }
                         ?>
