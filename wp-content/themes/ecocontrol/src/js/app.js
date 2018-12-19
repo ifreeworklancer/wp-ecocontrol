@@ -157,7 +157,7 @@ require('bootstrap');
                 draggable: false,
                 pageDots: false,
                 adaptiveHeight: true,
-                autoPlay: 2500,
+                autoPlay: 3500,
                 pauseAutoPlayOnHover: false
             });
         }
