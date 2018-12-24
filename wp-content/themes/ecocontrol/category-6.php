@@ -55,14 +55,17 @@ get_header('secondary');
                         <div class="content-header mb-5">
                             <div class="quote-slider">
                                 <div class="quote-slider-item">
+                                    <div class="img" style="background-image: url('<?= get_theme_file_uri('images/content/secondary/archive-institute/quote/bg-1.png');?>');"></div>
                                     <h5 class="quote-slider-item__text"><?= __('[:ru]Человеком была сделана огромная ошибка в том, что он отделил себя от законов природы и перестал с ними считаться[:ua]Людиною була зроблена величезна помилка в тому, що він відділив себе від законів природи і перестав з ними рахуватися') ?></h5>
                                     <div class="quote-slider-item__author"><?= __('[:ru]В.И.Вернадский[:ua]В.І.Вернадський') ?></div>
                                 </div>
                                 <div class="quote-slider-item">
+                                    <div class="img" style="background-image: url('<?= get_theme_file_uri('images/content/secondary/archive-institute/quote/bg-3.png');?>');"></div>
                                     <h5 class="quote-slider-item__text"><?= __('[:ru]Природа всегда права. Ошибки исходят от людей[:ua]Природа завжди права. Помилки виходять від людей') ?></h5>
                                     <div class="quote-slider-item__author"><?= __('[:ru]Иоганн Вольфганг фон Гёте[:ua]Йоганн Вольфганг фон Гете') ?></div>
                                 </div>
                                 <div class="quote-slider-item">
+                                    <div class="img" style="background-image: url('<?= get_theme_file_uri('images/content/secondary/archive-institute/quote/bg-2.png');?>');"></div>
                                     <h5 class="quote-slider-item__text"><?= __('[:ru]Природа всегда действует не спеша и по-своему экономно[:ua]Природа завжди діє не поспішаючи і по-своєму економно') ?></h5>
                                     <div class="quote-slider-item__author"><?= __('[:ru]Шарль-Луи Монтескье[:ua]Шарль-Луї Монтеск\'є') ?></div>
                                 </div>

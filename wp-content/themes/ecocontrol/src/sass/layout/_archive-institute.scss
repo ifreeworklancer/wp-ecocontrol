@@ -136,8 +136,17 @@
   text-align: center;
   z-index: 3;
 
+  .img {
+    @extend %pos;
+    @extend %img;
+    top: -15px;
+    bottom: -15px;
+    z-index: -3;
+  }
+
   &__text {
     font-size: $h4-font-size / 1.6;
+    color: #fff;
 
     @media (min-width: map_get($grid-breakpoints, sm)) {
       font-size: $h4-font-size;
